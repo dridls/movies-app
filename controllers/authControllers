@@ -1,14 +1,24 @@
 const User = require("../models/User");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const { registerValidation, loginValidation } = require("../routes/validation");
+
 // const jwt = require("jsonwebtoken");
-// const initialize = require("../config/passport-conf");
-// const passport = require("passport");
+const initialize = require("../config/passport-config");
+const passport = require("passport");
 // const res = require("express/lib/response");
+initialize(passport);
 
 const getRegisterPage = async (req, res) => {
   try {
     res.render("../views/register.ejs");
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+const getLoginPage = async (req, res) => {
+  try {
+    res.render("../views/login.ejs");
   } catch (err) {
     res.status(400).send(err);
   }
@@ -33,7 +43,7 @@ const createUser = async (req, res) => {
   });
   try {
     const savedUser = await user.save();
-    res.send(savedUser);
+    res.redirect("/");
   } catch (err) {
     res.status(400).send(err);
   }
@@ -57,11 +67,12 @@ const login = async (req, res) => {
   // const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
   // res.header("auth-token", token).send(token);
 
-  res.redirect("/favorites");
+  res.redirect("views/movies");
 };
 
 module.exports = {
   createUser,
   login,
   getRegisterPage,
+  getLoginPage,
 };
