@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { registerValidation, loginValidation } = require("./validation");
 const authController = require("../controllers/authControllers");
 const favoritesController = require("../controllers/favoritesControllers");
+const moviesController = require("../controllers/moviesControllers")
 const passport = require("passport");
 
 router.get("/", (req, res) => {

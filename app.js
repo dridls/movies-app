@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 app.set("view-engine", "ejs");
 // Import Routes
 const routes = require("./routes/routes");
+const movieRoutes = require("./routes/movieRoutes");
 
 dotenv.config();
 
