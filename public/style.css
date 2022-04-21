@@ -1,10 +1,4 @@
 :root {
-<<<<<<< Updated upstream
-  --col-light: #fff;
-  --col-dark: #7d0202;
-  --col-accent: #151582;
-  --col-accent2: #0c880a;
-=======
   --col-light: rgba(255, 255, 255, 0.627);
   --col-dark: #000;
   --col-accent: #65656537;
@@ -18,51 +12,10 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
   font-weight: 200;
->>>>>>> Stashed changes
 }
 
 body {
   margin: 0 auto;
-<<<<<<< Updated upstream
-}
-
-.app-container {
-  margin: auto;
-  width: 800px;
-  height: 80vh;
-  border: 1px solid blue;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-.collection {
-  display: grid;
-  margin: 0 auto;
-  width: 700px;
-  height: 50vh;
-  border: 1px solid red;
-  border-radius: 10px;
-  grid-template-columns: repeat(auto-fit, 200px);
-  justify-content: center;
-  text-align: center;
-}
-
-.one-film {
-  width: 100%;
-  object-fit: cover;
-  margin: 1rem 0;
-  border: 1px solid black;
-=======
   min-height: 100vh;
   background-color: var(--col-dark);
   color: var(--col-light);
@@ -117,5 +70,4 @@ h3 {
   text-transform: uppercase;
   font-size: 12px;
   padding: 5px 0;
->>>>>>> Stashed changes
 }
